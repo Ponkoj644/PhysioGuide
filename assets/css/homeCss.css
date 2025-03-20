@@ -3,20 +3,21 @@
 
 /* variabls */
 :root {
-  --textPrimary: rgb(21, 60, 51);
-  --textSecondary: rgb(97, 158, 144);
+  --textPrimary: #0a2540;
+  --textSecondary: #6358ff;
   --textWhite: #ffffff;
 
-  --bg-white: #ffffff;
-  --bgPrimary: rgb(21, 60, 51);
-  --bgSecondary: rgb(97, 158, 144);
+  --bgPrimary: #0a2540;
+  --bgSecondary: #6358ff;
   --bgTertiary: #e6efed;
+  --bg-white: #ffffff;
   --accent-color: #619e90;
-
+  /* --bgPrimary: #153c33; */
+  /* --bgSecondary: #619e90; */
   --dividerColor: #ffffff26;
   --darkDividerColor: #153c331a;
   --transition300: all 0.3s ease-in-out;
-  --error-color: rgb(230, 87, 87);
+  --error-color: #e65757;
 }
 
 *,
@@ -1292,13 +1293,13 @@ svg {
 }
 
 .team_social_icon ul li a i {
-  color: var(--accent-color);
+  color: var(--textPrimary);
   font-size: 22px;
   transition: var(--transition300);
 }
 
 .team_social_icon ul li a:hover i {
-  color: var(--textPrimary);
+  color: var(--textSecondary);
 }
 /* our team end */
 
