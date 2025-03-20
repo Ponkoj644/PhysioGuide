@@ -238,7 +238,7 @@ svg {
   background-color: #ffffff;
 }
 
-.my_navbar .navbar-brand{
+.my_navbar .navbar-brand {
   max-width: 150px;
 }
 .my_navbar .nav-link {
@@ -327,6 +327,23 @@ svg {
 
 .hero_image {
   position: relative;
+  z-index: 1;
+}
+
+.hero_image img {
+  background-blend-mode: lighten;
+}
+
+.hero_image::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 98%;
+  border-top-left-radius: 30px;
+  background-color: var(--bgPrimary);
+  z-index: -1;
 }
 /* Export doctor tag css */
 .export_doctor_box {
