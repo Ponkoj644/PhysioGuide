@@ -237,6 +237,10 @@ svg {
 .my_navbar {
   background-color: #ffffff;
 }
+
+.my_navbar .navbar-brand{
+  max-width: 150px;
+}
 .my_navbar .nav-link {
   font-weight: 500;
   line-height: 1.688rem;

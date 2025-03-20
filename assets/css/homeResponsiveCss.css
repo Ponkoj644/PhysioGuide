@@ -22,6 +22,7 @@
   }
 
   /* header css start */
+
   .header_area .my_navbar .navbar-nav {
     background-color: var(--bgPrimary);
     width: 100%;
@@ -399,12 +400,9 @@
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .my_navbar .navbar-brand {
-    width: 70%;
-  }
-  .my_navbar .navbar-brand img {
+  /* .my_navbar .navbar-brand img {
     width: 90%;
-  }
+  } */
 
   .hero_btn {
     flex-direction: column;
