@@ -54,7 +54,7 @@
     text-align: center;
   }
 
-  .hero_image::before{
+  .hero_image::before {
     width: 100%;
     height: 95%;
     border-top-right-radius: 30px;
