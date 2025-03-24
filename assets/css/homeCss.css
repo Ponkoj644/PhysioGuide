@@ -238,7 +238,6 @@ svg {
   background-color: #ffffff;
 }
 
-
 .my_navbar .nav-link {
   font-weight: 500;
   line-height: 1.688rem;
@@ -254,35 +253,40 @@ svg {
 .my_navbar .dropdown-menu {
   margin-top: 0;
   background-color: var(--bgSecondary);
-  width: 100%;
-  max-width: 350px;
-  min-width: 250px;
+  animation: slideup 0.5s ease-in-out;
+  min-width: 200px;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(25px);
+    visibility: visible;
+  }
+  to {
+    transform: translateY(0);
+    visibility: hidden;
+  }
 }
 
 .my_navbar .dropdown-menu .dropdown-item {
   color: var(--textWhite);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.my_navbar .dropdown-menu .dropdown-item:focus {
+  background-color: var(--bgPrimary);
 }
 
 .my_navbar .dropdown-menu .dropdown-item:hover {
   background-color: var(--bgPrimary);
-  opacity: 0.7;
 }
 
-/* .my_navbar .dropdown-menu li a {
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-  transform: scale(0.95);
-} */
-
-/* .my_navbar .dropdown-menu li:hover a {
-  transform: scale(1);
-} */
-
-.my_navbar .dropdown:hover .dropdown-menu {
+/* .my_navbar .dropdown:hover .dropdown-menu {
   display: block;
-}
+  transition: all 0.3s ease-in-out;
+} */
 
 /* page dropdown css end */
 
@@ -1846,7 +1850,7 @@ svg {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: var(--accent-color);
+  background-color: var(--bgSecondary);
   border-radius: 0px;
   transition: all 0.4s ease-in-out;
   height: 100%;
