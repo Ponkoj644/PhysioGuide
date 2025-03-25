@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio || Service</title>
 
+    <!-- AOS animation cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- fontawesome cdn -->
     <link
       rel="stylesheet"
@@ -32,6 +35,16 @@
     <link rel="stylesheet" href="../assets/css/homeResponsiveCss.css" />
   </head>
   <body>
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+      <div class="spinner">
+        <div class="circle"></div>
+        <i class="fas fa-heartbeat medical-icon"></i>
+      </div>
+      <h3>Our Services</h3>
+    </div>
+    <!-- Preloader End -->
+
     <!-- header start -->
     <header class="header_area">
       <!-- navbar -->
@@ -143,7 +156,12 @@
           <div class="row">
             <div class="col-lg-12">
               <!-- page header box start -->
-              <div class="page_header_box">
+              <div
+                class="page_header_box"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1300"
+              >
                 <h1>Services</h1>
                 <nav>
                   <ol class="breadcrumb">
@@ -164,7 +182,12 @@
       <!-- page header end -->
 
       <!-- page services start -->
-      <section class="page_services">
+      <section
+        class="page_services"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <div class="container-fluid">
           <!-- service item -->
           <div class="row">
@@ -412,7 +435,12 @@
       <!-- page services end -->
 
       <!-- client tesimonial start -->
-      <section class="our_testimonial">
+      <section
+        class="our_testimonial"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="900"
+      >
         <div class="container-fluid">
           <div class="row section_row">
             <div class="col-lg-12">
@@ -647,7 +675,12 @@
       <!-- client tesimonial end -->
 
       <!-- why choose us start -->
-      <section class="why_choose_us">
+      <section
+        class="why_choose_us"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="900"
+      >
         <div class="container-fluid">
           <div class="row section_row">
             <!-- section title -->
@@ -858,7 +891,12 @@
     </main>
 
     <!-- footer start -->
-    <footer class="main_footer">
+    <footer
+      class="main_footer"
+      data-aos="fade-up"
+      data-aos-easing="linear"
+      data-aos-duration="900"
+    >
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3">
@@ -1037,6 +1075,14 @@
     </script>
     <!-- Back to top button end -->
 
+    <!-- AOS animation JS cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- ASO animation Initialization -->
+    <script>
+      AOS.init();
+    </script>
+
     <!-- bootstrap js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -1054,5 +1100,8 @@
 
     <!-- My script -->
     <script src="../assets/js/function.js"></script>
+
+    <!-- Preloader Js -->
+    <script src="../assets/js/preloader.js" defer></script>
   </body>
 </html>
