@@ -145,7 +145,3 @@ function appointmentsubmitMSG(valid, msg) {
   $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
 /* Appointment form validation end */
-
-// back to top button start //
-
-// back to top button end //

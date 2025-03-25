@@ -1,4 +1,5 @@
 /* fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* variabls */
@@ -12,8 +13,6 @@
   --bgTertiary: #e6efed;
   --bg-white: #ffffff;
   --accent-color: #619e90;
-  /* --bgPrimary: #153c33; */
-  /* --bgSecondary: #619e90; */
   --dividerColor: #ffffff26;
   --darkDividerColor: #153c331a;
   --transition300: all 0.3s ease-in-out;
@@ -33,6 +32,14 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7em;
+  /*  page amimation before load*/
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* page amimation after load */
+body.page-visible {
+  opacity: 1;
 }
 
 /* common style */
@@ -124,7 +131,6 @@ figure {
 }
 
 .section_title h2 {
-  /* font-size: clamp(1.2rem, 0.5786rem + 3.1071vw, 3.375rem); */
   font-size: clamp(1.625rem, 1.125rem + 2.5vw, 3.375rem);
   font-weight: 700;
   color: var(--textPrimary);
@@ -162,10 +168,6 @@ svg {
   vertical-align: middle;
 }
 
-/* .section_row .section_title {
-  margin-bottom: 0;
-} */
-
 /* image animation */
 .reveal {
   position: relative;
@@ -175,14 +177,14 @@ svg {
   overflow: hidden;
 }
 
-/* .reveal img {
+.reveal img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -webkit-transform-origin: left;
   transform-origin: left;
-} */
+}
 
 .image-anime {
   position: relative;
@@ -208,7 +210,6 @@ svg {
 }
 
 /* back to top button css start */
-
 .back_to_top {
   display: none;
   position: fixed;
@@ -232,6 +233,89 @@ svg {
 }
 
 /* back to top button css end */
+
+/* Preloader Container */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a2540;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.preloader h3 {
+  color: var(--bgTertiary);
+  font-weight: 300;
+  line-height: 1.7rem;
+  margin-top: 20px;
+}
+
+/* Smooth Fade-Out Effect */
+.preloader.fade-out {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+}
+
+/* Spinner Container */
+.spinner {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circle Animation */
+.circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 5px solid #333333;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  border-top: 5px solid #6358ff;
+}
+
+/* Medical Icon */
+.medical-icon {
+  font-size: 32px;
+  color: #6358ff;
+  position: absolute;
+  z-index: 1;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Animation Keyframes */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 /* header css start */
 .my_navbar {
@@ -811,9 +895,6 @@ svg {
 
 .service_item:hover .service_body p {
   color: var(--textWhite);
-}
-
-.service_item .service_footer {
 }
 
 .service_item .service_footer a {
