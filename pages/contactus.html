@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio || Contact</title>
+    <title>PhysioGuide || Contact</title>
 
     <!-- AOS animation cdn -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -388,7 +388,7 @@
       <!-- contact us form end -->
 
       <!-- google map start -->
-      <div
+      <section
         class="google_map"
         data-aos="fade-up"
         data-aos-easing="linear"
@@ -413,7 +413,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- google map end -->
 
       <!-- our scrolling ticker start -->
@@ -540,9 +540,9 @@
             <div class="about_service_list">
               <h3>more services</h3>
               <ul>
-                <li><a href="#">manual therapy</a></li>
-                <li><a href="#">chronic pain</a></li>
-                <li><a href="#">hand therapy</a></li>
+                <li><a href="./single-service.html">manual therapy</a></li>
+                <li><a href="./single-service.html">chronic pain</a></li>
+                <li><a href="./single-service.html">hand therapy</a></li>
               </ul>
             </div>
             <!-- About Links End -->
@@ -560,7 +560,7 @@
                     <img src="../assets/images/icon-phone.svg" alt="" />
                   </div>
                   <div class="footer_info_box_content">
-                    <p>(+880) 183 304 4436</p>
+                    <p>+(01) 123 456 789</p>
                   </div>
                 </div>
                 <!-- Footer Info Box End -->
@@ -621,6 +621,7 @@
       </div>
     </footer>
     <!-- footer end -->
+
     <!-- main end -->
 
     <!-- Back to top button start -->
@@ -632,36 +633,12 @@
     >
       <i class="fas fa-arrow-up"></i>
     </button>
-
-    <script>
-      // Get the button
-      let mybutton = document.getElementById("back_to_top");
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 250 ||
-          document.documentElement.scrollTop > 250
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
+    <!-- Back to top JS -->
+    <script src="../assets/js/back_to_top.js" defer></script>
     <!-- Back to top button end -->
 
     <!-- AOS animation JS cdn -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
 
     <!-- ASO animation Initialization -->
     <script>
@@ -673,15 +650,25 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
+      async
     ></script>
 
     <!-- swiperjs js -->
-    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js" defer></script>
 
     <!-- Counter -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+      async
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"
+      async
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"
+      async
+    ></script>
 
     <!-- Validation js -->
     <script
@@ -689,10 +676,11 @@
       integrity="sha512-dTu0vJs5ndrd3kPwnYixvOCsvef5SGYW/zSSK4bcjRBcZHzqThq7pt7PmCv55yb8iBvni0TSeIDV8RYKjZL36A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      async
     ></script>
 
     <!-- My script -->
-    <script src="../assets/js/function.js"></script>
+    <script src="../assets/js/function.js" defer></script>
 
     <!-- Preloader Js -->
     <script src="../assets/js/preloader.js" defer></script>
